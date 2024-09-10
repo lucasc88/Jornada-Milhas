@@ -15,6 +15,12 @@ import { CardComponent } from './shared/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardSearchComponent } from './shared/card-search/card-search.component';
 import { CardTestimonialsComponent } from './shared/card-testimonials/card-testimonials.component';
+import { SearchFormComponent } from './shared/search-form/search-form.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -27,7 +33,8 @@ import { CardTestimonialsComponent } from './shared/card-testimonials/card-testi
     HomeComponent,
     CardComponent,
     CardSearchComponent,
-    CardTestimonialsComponent
+    CardTestimonialsComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,12 @@ import { CardTestimonialsComponent } from './shared/card-testimonials/card-testi
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

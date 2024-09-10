@@ -1,0 +1,38 @@
+<app-card variant="secondary" class="form-search">
+  <form>
+    <h2>Tickets</h2>
+    <div class="flex-container">
+      <mat-button-toggle-group aria-label="Ticket Type">
+        <mat-button-toggle>
+          <mat-icon>check</mat-icon>
+          Round Trip
+        </mat-button-toggle>
+        <mat-button-toggle>One-way</mat-button-toggle>
+      </mat-button-toggle-group>
+      <mat-chip-listbox aria-label="Fish selection">
+        <mat-chip-option>One fish</mat-chip-option>
+        <mat-chip-option>Two fish</mat-chip-option>
+        <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+        <mat-chip-option color="warn">Warn fish</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+
+    <div class="flex-container">
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Origin</mat-label>
+        <mat-icon matPrefix>flight_takeoff</mat-icon>
+        <input matInput placeholder="Origin" />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon>sync_alt</mat-icon>
+      </button>
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Destination</mat-label>
+        <mat-icon matPrefix> flight_land </mat-icon>
+        <input matInput placeholder="Destination" />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+  </form>
+</app-card>
