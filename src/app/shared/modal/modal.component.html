@@ -1,0 +1,45 @@
+<section class="modal">
+  <h1 mat-dialog-title>Passanger</h1>
+  <div mat-dialog-content>
+    <div class="age-selection">
+      <ul>
+        <div>
+          <li><strong>Adults</strong></li>
+          <li>(Over 12 years old)</li>
+          <li>
+            <button (click)="decreaseAdultsCount()" mat-mini-fab>
+              <img
+                src="assets/icones/do_not_disturb_on.png"
+                alt="Subtraction operator"
+              />
+            </button>
+            <span>{{ adultsCount }}</span>
+            <button (click)="increaseAdultsCount()" mat-mini-fab>
+              <img src="assets/icones/add_circle.png" alt="Addition operator" />
+            </button>
+          </li>
+        </div>
+
+        <div>
+          <li><strong>Children</strong></li>
+          <li>(Under 12 years old)</li>
+          <li>
+            <button (click)="decreaseChildrenCount()" mat-mini-fab>
+              <img
+                src="assets/icones/do_not_disturb_on.png"
+                alt="Subtraction operator"
+              />
+            </button>
+            <span>{{ childrenCount }}</span>
+            <button (click)="increaseChildrenCount()" mat-mini-fab>
+              <img src="assets/icones/add_circle.png" alt="Addition operator" />
+            </button>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</section>
