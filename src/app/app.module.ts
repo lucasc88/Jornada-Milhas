@@ -14,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './shared/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardSearchComponent } from './shared/card-search/card-search.component';
+import { CardTestimonialsComponent } from './shared/card-testimonials/card-testimonials.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CardSearchComponent } from './shared/card-search/card-search.component'
     ContainerComponent,
     HomeComponent,
     CardComponent,
-    CardSearchComponent
+    CardSearchComponent,
+    CardTestimonialsComponent
   ],
   imports: [
     BrowserModule,
