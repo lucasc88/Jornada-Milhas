@@ -1,3 +1,4 @@
+import { Promocao } from 'src/app/core/types/Promocao';
 import { PromotionService } from './../../core/services/promotion.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  promotions: Promocao[] = [];
   constructor(private promotionService: PromotionService) { }
 
   ngOnInit(): void {
     this.promotionService.promotionList().subscribe(promocoes => {
-      console.log(promocoes);
+      this.promotions = promocoes;
     });
   }
 

@@ -15,7 +15,7 @@ export class PromotionService {
     private httpClient: HttpClient
   ) { }
 
-  promotionList(): Observable<Promocao> {
-    return this.httpClient.get<Promocao>(this.apiUrlPromocoes);
+  promotionList(): Observable<Promocao[]> {
+    return this.httpClient.get<Promocao[]>(this.apiUrlPromocoes);
   }
 }
