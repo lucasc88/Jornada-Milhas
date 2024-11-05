@@ -27,6 +27,8 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { DropDownUfComponent } from './shared/search-form/drop-down-uf/drop-down-uf.component';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardSearchComponent,
     CardTestimonialsComponent,
     SearchFormComponent,
-    ModalComponent
+    ModalComponent,
+    DropDownUfComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatDialogModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }],
   bootstrap: [AppComponent]

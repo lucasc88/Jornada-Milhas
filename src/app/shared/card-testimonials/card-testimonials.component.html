@@ -1,10 +1,10 @@
-<mat-card class="testimonial">
-  <mat-card-content>
-    <img src="assets/images/avatar3.png" alt="Person Avatar" />
+<mat-card class="testimonial" *ngFor="let testimonial of testimonials">
+  <mat-card-content >
+    <img src="{{testimonial.avatar}}" alt="Person Avatar" />
     <ul>
-      <li>{{ testimonials }}</li>
+      <li>{{ testimonial.autor }}</li>
       <li>
-        <strong>{{ authorship }}</strong>
+        <strong>{{ testimonial.texto }}</strong>
       </li>
     </ul>
   </mat-card-content>
