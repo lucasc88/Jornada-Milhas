@@ -7,14 +7,24 @@
     {{ prefixIcon }}
   </mat-icon>
 
-  <input matInput [matAutocomplete]="auto"/>
+  <input
+    matInput
+    placeholder="Origin"
+    [formControl]="control"
+    [name]="label"
+    ngDefaultControl
+    [matAutocomplete]="auto"
+  />
 
   <mat-icon matSuffix>search</mat-icon>
-
-  <mat-autocomplete #auto="matAutocomplete">
-    
-    <mat-option *ngFor="let option of filteredOptions" [value]="option">
-      {{ option }}
+  
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option
+      *ngFor="let state of filteredOptions$ | async"
+      [value]="state.nome"
+    >
+      {{ state.nome }}
     </mat-option>
   </mat-autocomplete>
+
 </mat-form-field>

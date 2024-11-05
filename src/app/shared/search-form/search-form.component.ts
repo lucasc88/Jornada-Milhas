@@ -10,12 +10,12 @@ import { SearchFormService } from 'src/app/core/services/search-form.service';
 })
 export class SearchFormComponent {
 
-  constructor(
-    public dialog: MatDialog,
-    public searchFormService: SearchFormService
-  ) { }
+  constructor(public dialog: MatDialog,
+    public searchFormService: SearchFormService) { }
 
   openDialog() {
-    this.dialog.open(ModalComponent);
+    this.dialog.open(ModalComponent, {
+      width: '50%'
+    })
   }
 }

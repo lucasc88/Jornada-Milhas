@@ -3,19 +3,19 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 import { UnidadeFederativa } from './UnidadeFederativa';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FederativeUnityService {
 
-  private apiUrl: string = 'https://servicodados.ibge.gov.br/api/v1/localidades/distritos';
+  private apiUrl: string = environment.apiUrl + 'estados';
   private cache$?: Observable<UnidadeFederativa[]>;
 
   constructor(
     private http: HttpClient
-  ) { 
-  }
+  ) { }
 
   listar() : Observable<UnidadeFederativa[]> {
     if (!this.cache$) {
