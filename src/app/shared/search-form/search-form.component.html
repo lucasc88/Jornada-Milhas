@@ -1,13 +1,16 @@
 <app-card variant="secondary" class="form-search">
-  <form>
+  <form [formGroup]="searchFormService.searchForm">
     <h2>Tickets</h2>
     <div class="flex-container">
-      <mat-button-toggle-group aria-label="Ticket Type">
-        <mat-button-toggle>
-          <mat-icon>check</mat-icon>
+      <mat-button-toggle-group aria-label="Ticket Type" formControlName="oneWay">
+        <mat-button-toggle [value]="false">
+          <mat-icon *ngIf="!searchFormService.searchForm.get('oneWay')?.value">check</mat-icon>
           Round Trip
         </mat-button-toggle>
-        <mat-button-toggle>One-way</mat-button-toggle>
+        <mat-button-toggle [value]="true">
+          <mat-icon *ngIf="searchFormService.searchForm.get('oneWay')?.value">check</mat-icon>
+          One-way
+        </mat-button-toggle>
       </mat-button-toggle-group>
       <mat-chip-listbox (click)="openDialog()" aria-label="Ticket selection">
         <mat-chip-option>One Ticket</mat-chip-option>
