@@ -3,43 +3,46 @@
   <div mat-dialog-content>
     <div class="age-selection">
       <ul>
-        <div>
-          <li><strong>Adults</strong></li>
-          <li>(Over 12 years old)</li>
-          <li>
-            <button (click)="decreaseAdultsCount()" mat-mini-fab>
-              <img
-                src="assets/icones/do_not_disturb_on.png"
-                alt="Subtraction operator"
-              />
-            </button>
-            <span>{{ adultsCount }}</span>
-            <button (click)="increaseAdultsCount()" mat-mini-fab>
-              <img src="assets/icones/add_circle.png" alt="Addition operator" />
-            </button>
-          </li>
-        </div>
+        <li><strong>Adults</strong></li>
+        <li>(Over 12 years old)</li>
+        <li>
+          <app-control-button operation="decrement"></app-control-button>
+          <span>1</span>
+          <app-control-button operation="increment"></app-control-button>
+        </li>
+      </ul>
 
-        <div>
-          <li><strong>Children</strong></li>
-          <li>(Under 12 years old)</li>
-          <li>
-            <button (click)="decreaseChildrenCount()" mat-mini-fab>
-              <img
-                src="assets/icones/do_not_disturb_on.png"
-                alt="Subtraction operator"
-              />
-            </button>
-            <span>{{ childrenCount }}</span>
-            <button (click)="increaseChildrenCount()" mat-mini-fab>
-              <img src="assets/icones/add_circle.png" alt="Addition operator" />
-            </button>
-          </li>
-        </div>
+      <ul>
+        <li><strong>Children</strong></li>
+        <li>(Between 2 e 11 years old)</li>
+        <li>
+          <app-control-button operation="decrement"></app-control-button>
+          <span>1</span>
+          <app-control-button operation="increment"></app-control-button>
+        </li>
+      </ul>
+
+      <ul>
+        <li><strong>Babies</strong></li>
+        <li>(Under 12 years old)</li>
+        <li>
+          <app-control-button operation="decrement"></app-control-button>
+          <span>1</span>
+          <app-control-button operation="increment"></app-control-button>
+        </li>
       </ul>
     </div>
+
+    <div class="categories-selection">
+      <p><strong>Category</strong></p>
+      <mat-chip-listbox aria-label="Ticket Selection">
+        <mat-chip-option selected>1 adult</mat-chip-option>
+        <mat-chip-option>Economic Seat</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
   </div>
-  <div mat-dialog-actions>
-    <button mat-button mat-dialog-close>Close</button>
+
+  <div mat-dialog-actions class="modal-actions">
+    <button color="primary" mat-flat-button mat-dialog-close>SEARCH</button>
   </div>
 </section>
